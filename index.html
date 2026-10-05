@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV - Jamel Alan Pimienta Beltrán</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Barra de acciones rápidas (no visible al imprimir) -->
+  <div class="action-bar no-print">
+    <button id="themeToggleBtn" type="button" class="btn" title="Alternar tema">
+      <span id="themeIcon">🌙</span> <span id="themeText">Modo Oscuro</span>
+    </button>
+    <button id="copyEmailBtn" type="button" class="btn" title="Copiar correo">
+      📋 Copiar Correo
+    </button>
+    <button id="printBtn" type="button" class="btn btn-primary" title="Imprimir o guardar en PDF">
+      🖨️ Imprimir / Guardar PDF
+    </button>
+  </div>
+
+  <main class="cv-container">
+    <!-- Encabezado -->
+    <header class="cv-header">
+      <h1 class="name">JAMEL ALAN PIMIENTA BELTRÁN</h1>
+      <p class="role">Desarrollador Front End Junior</p>
+      <div class="contact-info">
+        <a href="tel:3017040086" class="contact-link">3017040086</a>
+        <span class="separator">|</span>
+        <a href="mailto:jpimientabe@gmail.com" class="contact-link" id="emailLink">jpimientabe@gmail.com</a>
+        <span class="separator">|</span>
+        <a href="https://portafolio-jamel.netlify.app/" target="_blank" rel="noopener noreferrer" class="contact-link">https://portafolio-jamel.netlify.app/</a>
+      </div>
+    </header>
+
+    <!-- Resumen Profesional -->
+    <section class="cv-section">
+      <h2 class="section-title">RESUMEN PROFESIONAL</h2>
+      <p class="section-text">
+        Tecnólogo en telecomunicaciones con más de 2 años de experiencia en desarrollo frontend y backend. Especializado en la creación de interfaces web dinámicas con Vue.js, Angular y React, y en la integración con servicios backend mediante Java y Spring Framework. Con experiencia en automatización de pruebas con Selenium y Playwright, y en la implementación de pipelines de CI/CD con Jenkins. Enfocado en la calidad del software y en la mejora continua de la experiencia del usuario.
+      </p>
+    </section>
+
+    <!-- Experiencia Profesional -->
+    <section class="cv-section">
+      <h2 class="section-title">EXPERIENCIA PROFESIONAL</h2>
+
+      <!-- Hiberus -->
+      <article class="job-item">
+        <div class="job-header">
+          <span class="company-name">HIBERUS</span>
+          <span class="job-dates">Noviembre 2025 – Abril 2026</span>
+        </div>
+        <div class="job-position">Desarrollador Front End</div>
+        <ul class="job-details">
+          <li>Desarrollo y maquetación de aplicaciones web para el sector financiero utilizando el framework CELLS de BBVA, basado en Web Components, HTML, CSS y JavaScript.</li>
+          <li>Implementación de componentes reutilizables y optimización del rendimiento, logrando una mejora del 25% en los tiempos de carga.</li>
+          <li>Colaboración con equipos multidisciplinarios bajo metodología Scrum para la entrega continua de funcionalidades.</li>
+        </ul>
+      </article>
+
+      <!-- Rappi -->
+      <article class="job-item">
+        <div class="job-header">
+          <span class="company-name">RAPPI</span>
+          <span class="job-dates">Enero 2024 – Agosto 2025</span>
+        </div>
+        <div class="job-position">Desarrollador de Software Junior</div>
+        <ul class="job-details">
+          <li>Contribuí al desarrollo y mantenimiento de un microservicio para la gestión de inventarios de socios, utilizando Python, FastAPI y PostgreSQL.</li>
+          <li>Desarrollé y optimicé componentes de frontend con Vue.js y TypeScript, mejorando la interactividad y el rendimiento de la interfaz de usuario.</li>
+          <li>Implementé pruebas unitarias y de integración con Pytest y Playwright, incrementando la cobertura de código en un 15% y asegurando la calidad del software.</li>
+        </ul>
+      </article>
+
+      <!-- Colvatel -->
+      <article class="job-item">
+        <div class="job-header">
+          <span class="company-name">COLVATEL S.A E.S.P</span>
+          <span class="job-dates">Octubre 2018 – Noviembre 2023</span>
+        </div>
+        <div class="job-position">Auxiliar de Ingeniería</div>
+        <ul class="job-details">
+          <li>Implementé túneles VPN IPsec para más de 200 empleados, disminuyendo los incidentes de conectividad en un 40%.</li>
+          <li>Automaticé tareas de monitoreo de red con scripts en Python, reduciendo el tiempo de detección de fallas.</li>
+          <li>Colaboré con el equipo de desarrollo en la fase de pruebas de nuevo software para la gestión de clientes.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- Educación -->
+    <section class="cv-section">
+      <h2 class="section-title">EDUCACIÓN</h2>
+
+      <div class="education-item">
+        <div class="education-header">
+          <span class="degree-name">Tecnólogo en Telecomunicaciones</span>
+          <span class="education-dates">2016 – 2019</span>
+        </div>
+        <div class="institution-name">Corporación Universitaria Minuto de Dios</div>
+      </div>
+
+      <div class="education-item">
+        <div class="education-header">
+          <span class="degree-name">Diplomado en Programación</span>
+          <span class="education-dates">2022 – 2022</span>
+        </div>
+        <div class="institution-name">Misión TIC 2022</div>
+      </div>
+    </section>
+
+    <!-- Habilidades Técnicas y Competencias -->
+    <section class="cv-section">
+      <h2 class="section-title">HABILIDADES TÉCNICAS Y COMPETENCIAS</h2>
+      <div class="skills-list">
+        <p><strong>Desarrollo:</strong> Java, JavaScript, Vue.js, React, Angular, HTML, CSS, Tailwind CSS</p>
+        <p><strong>Bases de Datos:</strong> SQL Server, PostgreSQL, MySQL</p>
+        <p><strong>Herramientas y Metodologías:</strong> Git, Jenkins, SonarQube, Nexus, Scrum, CI/CD</p>
+      </div>
+    </section>
+
+    <!-- Certificaciones y Cursos -->
+    <section class="cv-section">
+      <h2 class="section-title">CERTIFICACIONES Y CURSOS</h2>
+      <ul class="certifications-list">
+        <li><strong>Fundamentos de Testing y QA</strong> – Platzi (Septiembre 2022)</li>
+        <li><strong>Front end, CSS, Bootstrap</strong> – Code Academy (Septiembre 2022)</li>
+        <li><strong>JavaScript Algorithms and Data Structures</strong> – freeCodeCamp (Febrero 2023)</li>
+      </ul>
+    </section>
+  </main>
+
+  <div id="toast" class="toast" role="alert" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

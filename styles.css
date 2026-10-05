@@ -1,0 +1,407 @@
+/* ==========================================================================
+   Variables y configuración de diseño
+   ========================================================================== */
+:root {
+  --bg-page: #f1f5f9;
+  --bg-card: #ffffff;
+  --text-main: #1f2937;
+  --text-muted: #4b5563;
+  --primary-blue: #1d4ed8;
+  --primary-accent: #2563eb;
+  --border-color: #e2e8f0;
+  --shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  --line-height: 1.45;
+  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+[data-theme="dark"] {
+  --bg-page: #0f172a;
+  --bg-card: #1e293b;
+  --text-main: #f3f4f6;
+  --text-muted: #94a3b8;
+  --primary-blue: #60a5fa;
+  --primary-accent: #3b82f6;
+  --border-color: #334155;
+  --shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+}
+
+/* ==========================================================================
+   Estilos Globales
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-page);
+  color: var(--text-main);
+  line-height: var(--line-height);
+  font-size: 13.5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 16px;
+  min-height: 100vh;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* ==========================================================================
+   Barra de Acciones
+   ========================================================================== */
+.action-bar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 800px;
+  width: 100%;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-card);
+  color: var(--text-main);
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  background-color: var(--border-color);
+  transform: translateY(-1px);
+}
+
+.btn-primary {
+  background-color: var(--primary-accent);
+  color: #ffffff;
+  border-color: var(--primary-accent);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-blue);
+}
+
+/* ==========================================================================
+   Contenedor Principal del CV
+   ========================================================================== */
+.cv-container {
+  background-color: var(--bg-card);
+  width: 100%;
+  max-width: 794px; /* Tamaño carta / A4 estándar */
+  padding: 48px 56px;
+  border-radius: 4px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  transition: background-color 0.25s ease;
+}
+
+/* ==========================================================================
+   Encabezado
+   ========================================================================== */
+.cv-header {
+  margin-bottom: 4px;
+}
+
+.name {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: var(--text-main);
+  margin-bottom: 2px;
+}
+
+.role {
+  font-size: 14px;
+  color: var(--primary-blue);
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  font-size: 12.5px;
+  color: var(--text-muted);
+}
+
+.contact-link {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.contact-link:hover {
+  color: var(--primary-blue);
+  text-decoration: underline;
+}
+
+.separator {
+  color: #94a3b8;
+}
+
+/* ==========================================================================
+   Secciones y Títulos
+   ========================================================================== */
+.cv-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.section-title {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--primary-blue);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-left: 3.5px solid var(--primary-blue);
+  padding-left: 8px;
+  line-height: 1.1;
+  letter-spacing: 0.3px;
+  margin-bottom: 2px;
+}
+
+.section-text {
+  text-align: justify;
+  color: var(--text-main);
+  font-size: 12.5px;
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   Experiencia Laboral
+   ========================================================================== */
+.job-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 13px;
+}
+
+.company-name {
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.job-dates {
+  font-size: 12.5px;
+  color: var(--text-main);
+}
+
+.job-position {
+  font-style: italic;
+  color: var(--primary-blue);
+  font-size: 12.5px;
+  margin-bottom: 2px;
+}
+
+.job-details {
+  list-style-type: disc;
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.job-details li {
+  font-size: 12.2px;
+  line-height: 1.45;
+  color: var(--text-main);
+  text-align: justify;
+}
+
+/* ==========================================================================
+   Educación
+   ========================================================================== */
+.education-item {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.education-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 13px;
+}
+
+.degree-name {
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.education-dates {
+  font-size: 12.5px;
+  color: var(--text-main);
+}
+
+.institution-name {
+  font-style: italic;
+  color: var(--primary-blue);
+  font-size: 12.5px;
+}
+
+/* ==========================================================================
+   Habilidades y Certificaciones
+   ========================================================================== */
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 12.5px;
+  line-height: 1.45;
+}
+
+.skills-list strong {
+  color: var(--text-main);
+}
+
+.certifications-list {
+  list-style-type: disc;
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  font-size: 12.5px;
+}
+
+/* ==========================================================================
+   Notificación Toast
+   ========================================================================== */
+.toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background-color: #1f2937;
+  color: #ffffff;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: 13px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.toast.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   Ajustes para Pantallas Pequeñas (Responsivo)
+   ========================================================================== */
+@media (max-width: 680px) {
+  body {
+    padding: 12px 8px;
+  }
+
+  .cv-container {
+    padding: 24px 20px;
+    gap: 16px;
+  }
+
+  .job-header,
+  .education-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .job-dates,
+  .education-dates {
+    font-size: 11.5px;
+    color: var(--text-muted);
+  }
+}
+
+/* ==========================================================================
+   Reglas de Impresión (@media print)
+   ========================================================================== */
+@media print {
+  @page {
+    margin: 12mm 15mm;
+    size: letter;
+  }
+
+  body {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    padding: 0 !important;
+    font-size: 11.5pt;
+  }
+
+  .no-print,
+  .action-bar,
+  .toast {
+    display: none !important;
+  }
+
+  .cv-container {
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+    background-color: transparent !important;
+    gap: 14px !important;
+  }
+
+  .name {
+    color: #000000 !important;
+  }
+
+  .role {
+    color: #1d4ed8 !important;
+  }
+
+  .section-title {
+    border-left-color: #1d4ed8 !important;
+    color: #1d4ed8 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .job-position,
+  .institution-name {
+    color: #1d4ed8 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .contact-link {
+    color: #333333 !important;
+  }
+
+  .job-item,
+  .education-item,
+  .cv-section {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+}
